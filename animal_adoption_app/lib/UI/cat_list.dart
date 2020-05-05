@@ -23,6 +23,8 @@ class _CatListState extends State<CatList> {
     for(Cat cat in CatApi.allCatsFromJson(fileData)){
       _cats.add(cat);
     }
+
+    print(_cats.toString());
   }
 
   Widget _getAppTitleWidget()

@@ -11,6 +11,11 @@ class Cat{
   final List<String> cattributes;
   final String description;
 
+  @override
+  String toString(){
+    return "Cat $externalId is name $name";
+  }
+
 
   Cat({
     @required this.externalId,
@@ -24,10 +29,7 @@ class Cat{
     @required this.description
   });
 
-  @override
-  String toString(){
-    return "Cat $externalId is name $name";
-  }
+  
 
 
 

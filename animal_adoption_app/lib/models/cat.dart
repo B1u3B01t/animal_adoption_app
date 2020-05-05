@@ -22,7 +22,7 @@ class Cat{
     @required this.pictures,
     @required this.cattributes,
     @required this.description
-  })
+  });
 
 
 

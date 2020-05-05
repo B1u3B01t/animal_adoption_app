@@ -24,6 +24,11 @@ class Cat{
     @required this.description
   });
 
+  @override
+  String toString(){
+    return "Cat $externalId is name $name";
+  }
+
 
 
 }

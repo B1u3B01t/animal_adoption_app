@@ -55,7 +55,6 @@ class _CatListState extends State<CatList> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             new ListTile(
-              // onTap: TODO,
               leading: new Hero(
                 tag: index, 
                 child: new CircleAvatar(
@@ -78,7 +77,7 @@ class _CatListState extends State<CatList> {
   }
 
   Widget _getListViewWidget(){
-    new Flexible(
+    return new Flexible(
       child: new RefreshIndicator(
         child: new ListView.builder(
           itemBuilder: _buildCatItem,

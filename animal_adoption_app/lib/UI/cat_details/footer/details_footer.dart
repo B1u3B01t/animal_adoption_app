@@ -2,7 +2,7 @@ import 'package:animal_adoption_app/models/cat.dart';
 import 'package:flutter/material.dart';
 
 class CatShowcase extends StatefulWidget {
-  final Cat cat;
+  final Cat cat=null;
   @override
   _CatShowcaseState createState() => _CatShowcaseState();
 }

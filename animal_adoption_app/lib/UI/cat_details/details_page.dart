@@ -17,8 +17,17 @@ class CatDetailsPage extends StatefulWidget {
 class _CatDetailsPageState extends State<CatDetailsPage> {
   @override
   Widget build(BuildContext context) {
-    // return Container(
-      
-    // );
+    return new Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

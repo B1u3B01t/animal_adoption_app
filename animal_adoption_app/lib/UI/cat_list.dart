@@ -1,7 +1,10 @@
 import 'package:animal_adoption_app/services/api.dart';
+import 'package:animal_adoption_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:animal_adoption_app/models/cat.dart';
 import 'dart:async';
+import 'package:animal_adoption_app/UI/cat_details/details_page.dart';
+
 
 class CatList extends StatefulWidget {
   @override
@@ -24,12 +27,20 @@ class _CatListState extends State<CatList> {
     // for(Cat cat in CatApi.allCatsFromJson(fileData)){
     //   _cats.add(cat);
     // }
-
     setState(() {
       _cats = CatApi.allCatsFromJson(fileData);
     });
+  }
 
-
+  _navigateToCatDetails(Cat cat, Object avatarTag)
+  {
+    Navigator.of(context).push(
+      new FadePageRoute(
+        builder: (c) {
+          return new CatDetailsPage(cat, avatarTag: avatarTag);
+        }, 
+        settings: new RouteSettings())
+    );
   }
 
   Widget _getAppTitleWidget()
@@ -49,12 +60,16 @@ class _CatListState extends State<CatList> {
     Cat cat = _cats[index];
 
     return new Container(
+      
       margin: const EdgeInsets.only(top:5.0),
       child: new Card(
         child: new Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             new ListTile(
+              onTap: () => 
+              { print('tap'),
+                _navigateToCatDetails(cat, index)},
               leading: new Hero(
                 tag: index, 
                 child: new CircleAvatar(

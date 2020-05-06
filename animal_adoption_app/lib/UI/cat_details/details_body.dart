@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CatDetailBody extends StatelessWidget {
 
-  final Cat cat;
+  final Cat cat=null;
 
   @override
   Widget build(BuildContext context) {
